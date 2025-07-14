@@ -1,4 +1,5 @@
 /phpMyAdmin
 /WB02DSN1B
 /cms/backend/templates/templates_c
+/vendor
 composer.lock
