@@ -1,0 +1,25 @@
+------------------------------------------------------------
+Server Online
+CPU: i7-7500
+RAM: 8GB DDR4
+OS: Windows 11 Pro for Workstations (OS Build 22000.2416)
+
+Apache24 running properly.
+hMailServer running properly.
+
+HTML, CSS, JS, PHP, JSON detected.
+-------------------------------------------------------------
+
+ADMIN: Hi
+
+Simon Agar: online?
+SJ: Yes, online!
+Simon Agar: That is awesome :)
+Sabrina: Helloooooo
+Potato Salad: Great Success
+Gift: Hello
+Gift: Programming is fun
+SJ: It is fun
+Simon Agar: Is this a comment or subscription?
+SJ: What does sir mean with subscriptions?
+Stomach: I'm hungry

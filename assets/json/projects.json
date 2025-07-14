@@ -1,0 +1,38 @@
+[
+  {
+    "name": "CTU Buddy Educational System",
+    "desc": "An educational system developed as a project for CTU Training Solutions.",
+    "image": "cwd411",
+    "category": "html",
+    "links": {
+      "view": "../assets/projects/cwd411"
+    }
+  },
+  {
+    "name": "Library Management System",
+    "desc": "A Java-based terminal application for managing library operations, including book and member management, and book checkout functionality.",
+    "image": "library",
+    "category": "java",
+    "links": {
+      "view": "https://github.com/SJ-Pretorius/Library-Management-System"
+    }
+  },
+  {
+    "name": "Zoo Management System",
+    "desc": "A C# application with a graphical user interface (GUI) for managing zoo activities, allowing tasks like adding/removing animals and various management action.",
+    "image": "zoo",
+    "category": "c#",
+    "links": {
+      "view": "https://github.com/SJ-Pretorius/Zoo-Management-System"
+    }
+  },
+  {
+    "name": "Shop Management System",
+    "desc": "A Python-based terminal software solution for managing shop operations, focusing on tasks such as adding stock.",
+    "image": "stock",
+    "category": "python",
+    "links": {
+      "view": "https://github.com/SJ-Pretorius/Shop-Management-System"
+    }
+  }
+]

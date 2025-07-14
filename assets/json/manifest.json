@@ -1,0 +1,17 @@
+{
+    "short_name": "SJ's Portfolio",
+    "name": "Portfolio | SJ Pretorius",
+    "icons": [
+      {
+        "src": "/assets/images/business.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "id": "/?source=pwa",
+    "start_url": "/",
+    "background_color": "#222c94",
+    "display": "fullscreen",
+    "scope": "/",
+    "theme_color": "#0477ea"
+}
