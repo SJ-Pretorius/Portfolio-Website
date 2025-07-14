@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 5.5.1, created on 2025-07-14 16:12:06
+/* Smarty version 5.5.1, created on 2025-07-14 20:12:22
   from 'file:login.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_68751036bdb787_53446936',
+  'unifunc' => 'content_68754886b47cf6_20619013',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,14 +20,14 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_68751036bdb787_53446936 (\Smarty\Template $_smarty_tpl) {
+function content_68754886b47cf6_20619013 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\Apache24\\htdocs\\cms\\backend\\templates';
 $_smarty_tpl->getSmarty()->getRuntime('TplFunction')->registerTplFunctions($_smarty_tpl, array (
   'show_home' => 
   array (
     'compiled_filepath' => 'C:\\Apache24\\htdocs\\cms\\backend\\templates\\templates_c\\777bf61e91fcffbe251fc1e4049a7ac117c21ca1_0.file_login.tpl.php',
     'uid' => '777bf61e91fcffbe251fc1e4049a7ac117c21ca1',
-    'call_name' => 'smarty_template_function_show_home_43761431568751036a38cc0_00506039',
+    'call_name' => 'smarty_template_function_show_home_1776054321687548869805e6_33625148',
   ),
 ));
 ?><div class="d-flex justify-content-center align-items-center vh-100">
@@ -39,9 +39,9 @@ $_smarty_tpl->getSmarty()->getRuntime('TplFunction')->callTemplateFunction($_sma
 </div>
 
 <?php }
-/* smarty_template_function_show_home_43761431568751036a38cc0_00506039 */
-if (!function_exists('smarty_template_function_show_home_43761431568751036a38cc0_00506039')) {
-function smarty_template_function_show_home_43761431568751036a38cc0_00506039(\Smarty\Template $_smarty_tpl,$params) {
+/* smarty_template_function_show_home_1776054321687548869805e6_33625148 */
+if (!function_exists('smarty_template_function_show_home_1776054321687548869805e6_33625148')) {
+function smarty_template_function_show_home_1776054321687548869805e6_33625148(\Smarty\Template $_smarty_tpl,$params) {
 $_smarty_current_dir = 'C:\\Apache24\\htdocs\\cms\\backend\\templates';
 $params = array_merge(array('name'=>'show_home'), $params);
 foreach ($params as $key => $value) {
@@ -72,5 +72,5 @@ $_smarty_tpl->assign($key, $value);
 </form>
 <?php
 }}
-/*/ smarty_template_function_show_home_43761431568751036a38cc0_00506039 */
+/*/ smarty_template_function_show_home_1776054321687548869805e6_33625148 */
 }

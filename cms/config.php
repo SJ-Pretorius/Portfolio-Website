@@ -14,7 +14,7 @@ spl_autoload_register(function ($class) {
 	include "backend/classes/" . strtolower($class) . ".php";
 });
 
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 $GLOBALS['database'] = new Database();
 

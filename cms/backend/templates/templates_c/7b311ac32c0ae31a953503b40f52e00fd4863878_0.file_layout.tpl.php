@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 5.5.1, created on 2025-07-14 16:12:10
+/* Smarty version 5.5.1, created on 2025-07-14 20:12:26
   from 'file:layout.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6875103ade3469_79955375',
+  'unifunc' => 'content_6875488a6d7ac4_31151493',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6875103ade3469_79955375 (\Smarty\Template $_smarty_tpl) {
+function content_6875488a6d7ac4_31151493 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\Apache24\\htdocs\\cms\\backend\\templates';
 ?>      <div id="wrapper_content" class="d-flex flex-fill">
         <aside id="aside-main" class="aside-start aside-hide-xs bg-dark shadow-sm d-flex flex-column px-2 h-auto">

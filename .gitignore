@@ -1,3 +1,4 @@
 /phpMyAdmin
 /WB02DSN1B
-/cms/composer.lock
+/cms/backend/templates/templates_c
+composer.lock
