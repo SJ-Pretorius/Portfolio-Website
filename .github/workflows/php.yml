@@ -1,4 +1,4 @@
-name: Deploy to Raspberry Pi (via password)
+name: Deploy to Raspberry Pi
 
 on:
   push:
@@ -20,13 +20,13 @@ jobs:
         run: |
           sshpass -p "${{ secrets.PI_PASSWORD }}" \
           rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" ./ \
-          ${{ secrets.PI_USER }}@${{ secrets.PI_HOST }}:/home/pi/my-app
+          ${{ secrets.PI_USER }}@${{ secrets.PI_HOST }}:/var/www/html
 
       - name: Run Composer
         run: |
           sshpass -p "${{ secrets.PI_PASSWORD }}" \
           ssh -o StrictHostKeyChecking=no ${{ secrets.PI_USER }}@${{ secrets.PI_HOST }} << 'EOF'
-            cd /home/pi/my-app
+            cd /var/www/html
             composer install --no-dev --optimize-autoloader
             chmod -R 755 .
           EOF
