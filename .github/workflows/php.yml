@@ -1,4 +1,4 @@
-name: Deploy to Raspberry Pi
+name: Deploy to Raspberry Pi (via password)
 
 on:
   push:
@@ -10,21 +10,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Set up SSH
-      uses: webfactory/ssh-agent@v0.9.0
-      with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Install sshpass
+        run: sudo apt-get install -y sshpass
 
-    - name: Copy files to Raspberry Pi
-      run: |
-        rsync -avz --delete ./ pi@sjpret.co.za:/var/www/html/test
+      - name: Deploy to Pi
+        run: |
+          sshpass -p "${{ secrets.PI_PASSWORD }}" \
+          rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" ./ \
+          ${{ secrets.PI_USER }}@${{ secrets.PI_HOST }}:/home/pi/my-app
 
-    - name: Run composer install
-      run: |
-        ssh pi@sjpret.co.za << 'EOF'
-          cd /var/www/html/test
-          composer install --no-dev --optimize-autoloader
-        EOF
+      - name: Run remote commands
+        run: |
+          sshpass -p "${{ secrets.PI_PASSWORD }}" \
+          ssh -o StrictHostKeyChecking=no ${{ secrets.PI_USER }}@${{ secrets.PI_HOST }} << 'EOF'
+            cd /home/pi/my-app
+            composer install --no-dev --optimize-autoloader
+            chmod -R 755 .
+          EOF
