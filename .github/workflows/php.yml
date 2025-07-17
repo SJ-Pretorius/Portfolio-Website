@@ -36,3 +36,9 @@ jobs:
             composer install --no-dev --optimize-autoloader
             chmod -R 755 .
           EOF
+
+      - name: Set permissions for templates_c
+        run: |
+          sshpass -p "${{ secrets.PI_PASSWORD }}" \
+          ssh -o StrictHostKeyChecking=no ${{ secrets.PI_USER }}@${{ secrets.PI_HOST }} \
+          'sudo chmod -R 755 /var/www/html/cms/backend/templates/templates_c'
