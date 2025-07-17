@@ -22,7 +22,7 @@ class Printer {
 
     public function print($text) {
         if ($this->ready) {
-            $this->printer->text($text);
+            $this->printer->text(wordwrap($text, 48, "\n", true));
             return true;
         } else {
             return false;

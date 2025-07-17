@@ -6,8 +6,7 @@ if (empty($_POST['printer_do']) === false && $_SESSION['logged_in'] === true) {
             $printer = new Printer();
             if ($printer->isReady()) {
                 if ($_POST['text']) {
-                    $wrappedText = wordwrap($_POST['text'], 48, "\n", true);
-                    $printer->print($wrappedText);
+                    $printer->print($_POST['text']);
                     $printer->cut();
                     http_response_code(200);
                     echo json_encode([
