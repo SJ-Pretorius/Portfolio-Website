@@ -16,6 +16,12 @@ jobs:
       - name: Install sshpass
         run: sudo apt-get install -y sshpass
 
+      - name: Clear templates_c folder
+        run: |
+          sshpass -p "${{ secrets.PI_PASSWORD }}" \
+          ssh -o StrictHostKeyChecking=no ${{ secrets.PI_USER }}@${{ secrets.PI_HOST }} \
+          'rm -rf /home/pi/my-app/cms/backend/templates/templates_c'
+
       - name: Deploy to Server
         run: |
           sshpass -p "${{ secrets.PI_PASSWORD }}" \
