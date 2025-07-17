@@ -16,13 +16,13 @@ jobs:
       - name: Install sshpass
         run: sudo apt-get install -y sshpass
 
-      - name: Deploy to Pi
+      - name: Deploy to Server
         run: |
           sshpass -p "${{ secrets.PI_PASSWORD }}" \
           rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" ./ \
           ${{ secrets.PI_USER }}@${{ secrets.PI_HOST }}:/home/pi/my-app
 
-      - name: Run remote commands
+      - name: Run Composer
         run: |
           sshpass -p "${{ secrets.PI_PASSWORD }}" \
           ssh -o StrictHostKeyChecking=no ${{ secrets.PI_USER }}@${{ secrets.PI_HOST }} << 'EOF'
