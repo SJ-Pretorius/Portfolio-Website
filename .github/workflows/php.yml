@@ -20,7 +20,7 @@ jobs:
         run: |
           sshpass -p "${{ secrets.PI_PASSWORD }}" \
           ssh -o StrictHostKeyChecking=no ${{ secrets.PI_USER }}@${{ secrets.PI_HOST }} \
-          'rm -rf /var/www/html/cms/backend/templates/templates_c'
+          'sudo rm -rf /var/www/html/cms/backend/templates/templates_c'
 
       - name: Deploy to Server
         run: |
