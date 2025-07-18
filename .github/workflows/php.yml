@@ -40,5 +40,7 @@ jobs:
       - name: Set permissions for templates_c
         run: |
           sshpass -p "${{ secrets.PI_PASSWORD }}" \
-          ssh -o StrictHostKeyChecking=no ${{ secrets.PI_USER }}@${{ secrets.PI_HOST }} \
-          'sudo chmod -R 755 /var/www/html/cms/backend/templates/templates_c'
+          ssh -o StrictHostKeyChecking=no ${{ secrets.PI_USER }}@${{ secrets.PI_HOST }} << 'EOF'
+            mkdir -p /var/www/html/cms/backend/templates/templates_c
+            sudo chmod -R 755 /var/www/html/cms/backend/templates/templates_c
+          EOF
