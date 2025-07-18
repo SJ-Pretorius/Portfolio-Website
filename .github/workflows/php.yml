@@ -41,6 +41,8 @@ jobs:
         run: |
           sshpass -p "${{ secrets.PI_PASSWORD }}" \
           ssh -o StrictHostKeyChecking=no ${{ secrets.PI_USER }}@${{ secrets.PI_HOST }} << 'EOF'
-            mkdir -p /var/www/html/cms/backend/templates/templates_c
-            sudo chmod -R 755 /var/www/html/cms/backend/templates/templates_c
+            cd /var/www/html/cms/backend/templates/
+            mkdir -p templates_c
+            sudo chown -R www-data:www-data templates_c
+            sudo chmod -R 755 templates_c
           EOF
