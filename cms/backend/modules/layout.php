@@ -1,7 +1,7 @@
 <?php
 	$show_layout = false;
 	
-	if (empty($_GET['layout_do']) === false && $_SESSION['logged_in'] === true) {
+	if (empty($_GET['layout_do']) === false && isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
 		switch ($_GET['layout_do']) {
 			case "show_layout":
 				$show_layout = true;

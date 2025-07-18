@@ -1,7 +1,7 @@
 <?php
 	$show_printer = false;
 	
-	if (empty($_GET['printer_do']) === false && $_SESSION['logged_in'] === true) {
+	if (empty($_GET['printer_do']) === false && isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
 		switch ($_GET['printer_do']) {
 			case "show_home":
 				$show_printer = true;
