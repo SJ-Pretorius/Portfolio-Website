@@ -9,11 +9,9 @@ var printer = {
                 'text': $('#printer_text').val()
             },
             success: function (response) {
-                console.log(response);
-                toast.success('Printer', response.responseJSON.success);
+                toast.success('Printer', response.success);
             },
             error: function (response) {
-                console.log(response);
                 toast.error('Printer', response.responseJSON.error);
             }
         });
