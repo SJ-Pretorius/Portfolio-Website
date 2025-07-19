@@ -10,6 +10,7 @@ var printer = {
             },
             success: function (response) {
                 toast.success('Printer', response.success);
+                $('#printer_text').val('');
             },
             error: function (response) {
                 toast.error('Printer', response.responseJSON.error);
