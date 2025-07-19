@@ -5,7 +5,7 @@
 </div>
 
 {function name=show_home}
-<h1 class="h4 mb-2 text-center">SJ Pretorius | CMS</h1>
+<h1 class="h4 mb-2 text-center">SJ Pretorius | Portal</h1>
 <form class="js-ajax bs-validate" novalidate
     action="ajax.php"
     method="POST"
