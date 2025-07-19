@@ -9,7 +9,7 @@
 			case "logout":
 				unset($_SESSION['logged_in']);
 				http_response_code(204);
-				exit;
+				break;
 			default:
 				$show_login = true;
 		}
