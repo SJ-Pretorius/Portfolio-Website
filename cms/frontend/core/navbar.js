@@ -22,22 +22,7 @@ var navbar = {
             }
         })
     },
-    printer : function () {
-        $.ajax({
-            url: "ajax.php",
-            type: "GET",
-            data: {
-                'm': "printer",
-                'printer_do': 'show_home'
-            },
-            success: function (response) {
-                navbar.update(response);
-            },
-            error: function () {
-                toast.error('Printer', 'Network error or connection lost.');
-            }
-        })
-    },
+    
     logout : function () {
         $.ajax({
             url: "ajax.php",
